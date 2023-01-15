@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Library</title>
+</head>
+<body>
+    <nav>
+        <h2>Library</h2>
+        <button type="button" id="add">Add Book +</button>
+    </nav>
+    <aside id="myModal" style="display:none;">
+        <form>
+            <legend>Add New Book</legend>
+            <input type="text" name="title" id="title" maxlength="100" placeholder="title" required>
+            <input type="text" name="author" id="author" maxlength="50" placeholder="author" required>
+            <input type="number" name="pages" id="pages" placeholder="pages" required><br>
+            <label for="read">Have you read it?</label>
+            <input type="checkbox" name="read" id="read"><br>
+            <button type="submit" id="submit">submit</button>
+            <span class="close">&times;</span>
+        </form>
+    </aside>
+    <main id="container">
+    </main>
+</body>
+</html>
