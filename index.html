@@ -5,27 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/621e2dd331.js" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
     <title>Library</title>
 </head>
 <body>
-    <nav>
-        <h2>Library</h2>
-        <button type="button" id="add">Add Book +</button>
-    </nav>
-    <aside id="myModal" style="display:none;">
+    <aside>
+        <nav>
+            <i style="font-size: 2em;" class="fa-solid fa-book"></i>
+            <h2 style="font-size: 2em;">Library</h2>
+        </nav>
         <form>
-            <legend>Add New Book</legend>
-            <input type="text" name="title" id="title" maxlength="100" placeholder="title" required>
-            <input type="text" name="author" id="author" maxlength="50" placeholder="author" required>
-            <input type="number" name="pages" id="pages" placeholder="pages" required><br>
-            <label for="read">Have you read it?</label>
-            <input type="checkbox" name="read" id="read"><br>
-            <button type="submit" id="submit">submit</button>
-            <span class="close">&times;</span>
+            <legend style="grid-column: 1/3;font-weight: bold;">Add New Book : </legend>
+            <input style="grid-column: 1/3;" type="text" name="title" id="title" maxlength="100" placeholder="title" required>
+            <input style="grid-column: 1/3;"  type="text" name="author" id="author" maxlength="50" placeholder="author" required>
+            <input style="grid-column: 1/3;"  type="number" name="pages" id="pages" placeholder="pages" min="1" required>
+            <label for="read">Have you read it ?</label>
+            <input type="checkbox" name="read" id="read">
+            <button type="submit" id="submit">Submit</button>
         </form>
+        <footer>
+            <p>Created by Erycson Z.W</p>
+        </footer>
     </aside>
-    <main id="container">
+    <main>
+        <h2 style="text-decoration: underline;">Book description</h2>
+        <div class="desc"></div>
+        <h2 style="text-decoration: underline;">List of Book</h2>
+        <div id="container">
+        </div>
     </main>
 </body>
 </html>

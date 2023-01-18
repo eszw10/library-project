@@ -1,16 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --wht1:#e9e9e9;
+    --wht2:#fdfdfd;
+    --dark:#121421;
+    --main:#4a80f0;
+    --mhover:#1357e3;
+}
+
 * {
     box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    margin: 0;
+    display: flex;
+}
+
+aside {
+    color: var(--wht1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 30vw;
+    background-color: var(--dark);
+    height: 100vh;
 }
 
 nav {
     display: flex;
-    justify-content: space-around;
-    position: sticky;
-    top: 0;
+    gap: 10px;
     align-items: center;
 }
 
-#container {
+form {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    font-size: 1em;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    justify-self: center;
+    /* align-items: center; */
+    align-self: center;
+}
+
+form input {
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--wht1);
+}
+
+form input[type="checkbox"] {
+    justify-self: start;
+}
+
+form button {
+    grid-column: 1/ span 2;
+    background-color: var(--main);
+    border-radius: 7px;
+    padding: 10px 0px;
+    color:var(--wht1);
+    font-size: 1em;
+    font-weight: bold;
+    transition: all 0.2s ease-in;
+}
+
+form button:hover {
+    background-color: var(--mhover);
+    cursor: pointer;
+}
+
+/* main */
+main {
+    padding: 30px;
+}
+
+#container {
+    background-color: #fdfdfd;
+    width: 70vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    /* grid-template-rows: 0.2fr; */
+    gap: 20px;
+    grid-auto-flow: row;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 10px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: fit-content;
+    border-radius: 10px;
+    padding-bottom: 15px;
+}
+
+.card img{
+    width: 100%;
+}
+
+.card p:first-of-type {
+    color: gray;
+}
+
+.card p:last-of-type {
+    font-size: 0.9em;
+}
+
+.card h3,p,.icon {
+    margin: 0;
+    margin-left: 15px;
+}
+
+.icon {
+    display: flex;
+    gap: 10px;
+    align-self: flex-end;
+    margin-right: 15px;
+}
+
+.icon i:hover {
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+
+}
+
+.btn {
+    padding: 10px 16px;
+    background-color: aqua;
+    border-radius: 10px;
 }
