@@ -13,7 +13,6 @@ submit.addEventListener('click',(event)=> {
     }
     console.log(library)
     addCard(library[library.length-1])
-
 })
 
 //Object Book and function
@@ -88,7 +87,6 @@ function addCard(obj){
     del.addEventListener('click', ()=> {
         console.log(library.indexOf(obj));
         let curr = library.indexOf(obj);
-        // console.log(container.children[curr])
         container.removeChild(container.children[curr]);
         library.splice(curr,1);
     })

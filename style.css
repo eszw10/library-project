@@ -74,7 +74,13 @@ form button:hover {
 
 /* main */
 main {
-    padding: 30px;
+    padding: 0px 30px;
+}
+
+.desc {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 #container {
@@ -83,7 +89,7 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, 200px);
     /* grid-template-rows: 0.2fr; */
-    gap: 20px;
+    gap: 40px;
     grid-auto-flow: row;
 }
 
@@ -95,9 +101,14 @@ main {
     overflow: hidden;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    height: fit-content;
     border-radius: 10px;
     padding-bottom: 15px;
+    transition: all 0.2s ease-in;
+}
+
+.card:hover {
+    box-shadow: var(--main) 0px 1px 4px, var(--main) 0px 0px 0px 3px;
+    cursor: pointer;
 }
 
 .card img{
@@ -119,9 +130,10 @@ main {
 
 .icon {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     align-self: flex-end;
     margin-right: 15px;
+    transition: 0.2s ease-in;
 }
 
 .icon i:hover {
