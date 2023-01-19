@@ -39,7 +39,7 @@ function addCard(obj){
     //define variable stage
     const card = document.createElement('div');
     let img = document.createElement('img');
-    img.setAttribute('src','/book.jpg')
+    img.setAttribute('src','book.jpg')
     let judul = document.createElement('h3');
     judul.textContent = obj.title;
     let penulis = document.createElement('p');
