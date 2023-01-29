@@ -16,11 +16,13 @@ submit.addEventListener('click',(event)=> {
 })
 
 //Object Book and function
-function Book(title, author, pages, isRead) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.isRead = isRead;
+class Book {
+    constructor(title, author, pages, isRead) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.isRead = isRead;
+    }
 }
 
 function getBook() {
@@ -55,7 +57,7 @@ function addCard(obj){
 
     //Check wether user already read the book or not
     obj.isRead === true? read.setAttribute('class','fa-solid fa-check'):read.setAttribute('class','fa-solid fa-xmark');
-    obj.isRead === true? read.style.color = 'green':read.style.color='red'
+    read.style.color = obj.isRead === true? 'green':'red'
 
     //toggle read script
     read.addEventListener('click',()=> {
